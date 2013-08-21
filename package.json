@@ -19,7 +19,6 @@
   "author": "Joe Wright",
   "license": "BSD",
   "dependencies": {
-    "lodash": "~1.3.1",
     "xml2js": "~0.2.8",
     "request": "~2.27.0",
     "express": "~3.3.5"
