@@ -33,10 +33,11 @@ app.get('/parse', function (req, res) {
 		if(err) return sendError(err);
 		parser.parseString(data.toString(), function(err, parsed) {
 			if(err) return sendError(err);
-			res.send(parsed);
+			res.header("Content-Type", "application/json");
+			res.send(JSON.stringify(parsed));
 		});
 	});
 });
-app.listen(process.env.PORT || 8080, function() {
-	console.log('Listening on port ' + process.env.PORT || 8080);
+app.listen(process.env.PORT || 5000, function() {
+	console.log('Listening on port ' + process.env.PORT || 5000);
 });

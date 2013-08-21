@@ -2,7 +2,7 @@
   "name": "xmlProxy",
   "version": "0.0.1",
   "description": "A proxy to parse XML for your browser-side JS.",
-  "main": "index.js",
+  "main": "web.js",
   "scripts": {
     "test": "node index.js"
   },
