@@ -6,10 +6,13 @@ var express = require('express'),
 	parser = new xml2js.Parser();
 
 //xDomain
-app.options('*', function (req, res) {
+app.use(function (req, res, next) {
 	res.header("Access-Control-Allow-Origin", "*");
-	res.header('Access-Control-Allow-Methods', 'GET,POST,PUT,HEAD,DELETE,OPTIONS');
+	res.header('Access-Control-Allow-Methods', 'GET,OPTIONS');
 	res.header("Access-Control-Allow-Headers", "content-Type, X-Requested-With");
+	next();
+});
+app.options('*', function (req, res) {
 	res.send("PARSE PROXY\n", {
 		"Allow": "OPTIONS, GET",
 		"Content-Type": "text/plain, application/json"
