@@ -1,6 +1,5 @@
 var express = require('express'),
 	app = express(),
-	_ = require('lodash'),
 	request = require('request'),
 	xml2js = require('xml2js'),
 	parser = new xml2js.Parser({explicitArray:false});
